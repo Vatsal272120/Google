@@ -16,11 +16,12 @@ const Search = ({ hideButtons = false }) => {
     e.preventDefault();
     console.log("button clicker", input);
 
+    // add the input to data layer
     dispatch({
       type: actionTypes.SET_SEARCH_TERM,
       term: input,
     });
-
+    //redirect to /search
     history.push("/search");
   };
 
